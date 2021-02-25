@@ -4,22 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font VT323 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
     
+    <!-- BoolStrap Framework-->
     <link rel="stylesheet" href="css/boolstrap.css">
     
+    <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
 
     <title>FizzBuzz</title>
+
 </head>
-<body>
 
-    <div class="flex-wrapper outer-wrapper">
-        <div class="container-fluid">
+    <body>
+
+        <div class="flex-wrapper outer-wrapper">
             
-            <ul id="populate-list" class="inline-list clearfix"></ul>
+            <header>
+                <h1 class="margin-t-standard margin-b-standard padding-standard text-center">FizzBuzz</h1>
+                <div id="button-bar" class="container-fluid padding-standard">
+                    
+                    <div class="outer-button text-secondary padding-standard margin-b-standard">
+                        <label class="margin-r-standard margin-t-standard margin-b-standard" for="input-fizz">Valore Fizz</label>
+                        <input class="padding-l-standard margin-t-standard margin-b-standard" id="input-fizz" type="number" min="2" max="9" value="3">
+                    </div>  <!-- Outer Fizz END -->
+                    
+                    <div class="outer-button text-secondary padding-standard margin-b-standard">
+                        <label class="margin-r-standard margin-t-standard margin-b-standard" for="input-buzz">Valore Buzz</label>
+                        <input class="padding-l-standard margin-t-standard margin-b-standard" id="input-buzz" type="number"  min="2" max="9" value="5">
+                    </div>  <!-- Outer Buzz END -->
 
-        </div>
-    </div>
-    <script src="JS/main.js"></script>
-</body>
+                    <div class="outer-button text-secondary padding-standard margin-b-standard">
+                        <label class="margin-r-standard margin-t-standard margin-b-standard" for="input-iterations">Iterazioni&nbsp;</label>
+                        <input class="padding-l-standard margin-t-standard margin-b-standard" id="input-iterations" type="number"  min="50" max="2000" value="100">
+                    </div>  <!-- Outer Iterations END -->
+                    
+                    <div class="outer-button text-secondary padding-standard margin-b-standard text-center">
+                        <button id="refresh-button">Ricarica</button>
+                    </div>  <!-- Outer Refresh Button END -->
+
+                </div>  <!-- Button bar END -->
+            </header>
+
+            <main>
+                <div class="container-fluid padding-standard">
+                    <ul id="populate-list" class="clearfix"></ul>
+                <div>    
+            </main>
+
+            <footer>
+                <div class="padding-standard text-secondary">
+                    <p>Questo gioco è stato realizzato utilizzando le seguenti tecnologie: HTML5, CSS3, BoolStrap v.0.0.1, JavaScript.</p>
+                    <p>Made with <span class="text-primary">&hearts;</span> in Riposto</p>
+            </div>
+            </footer>
+
+        </div>  <!-- Outer Wrapper -->
+
+        <!-- Script -->
+        <script src="JS/main.js"></script>
+
+    </body>
 </html>

@@ -1,11 +1,104 @@
 :root {
     --color-primary: rgb(68, 255, 68);
+    --color-secondary: rgba(255, 255, 255, 0.7);
     --color-bg: black;    
 }
 
+body {
+    font-family: 'VT323', monospace;
+    letter-spacing:1px;
+    font-size: 2rem;
+}
+
+.flex-wrapper.outer-wrapper {
+    justify-content: space-evenly;
+    max-width: 1200px;
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+/*
+######
+HEADER 
+######
+*/
+
+h1 {
+    font-size: 8rem;
+}
+
+header #button-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#button-bar > .outer-button {
+    flex: 1 1 100%;
+    font-size: 1.2em;
+}
+
+#button-bar .outer-button:not(:last-child) {    /* Only on xs devices */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+    #button-bar .outer-button:not(:last-child) {
+        display: block; /* Not flex on wider devices */
+        flex: 1 1 calc( 100% / 3);
+        text-align: center;
+    }
+}
+
+#button-bar input {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    color:gray;
+    min-width: 200px;
+}
+
+#button-bar #refresh-button {
+    padding: 20px 40px;
+    font-size: 3rem;
+    color: var(--color-secondary);
+    border: 4px outset var(--color-secondary);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+    font-family: inherit;
+    letter-spacing: inherit;
+}
+#button-bar #refresh-button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+/*
+###########
+NUMBER LIST 
+###########
+*/
+
 ul#populate-list li {
+    width: calc(100% / 4);      /* <li> size on extra small devices */ 
     float: left;
-    width: calc(100% / 8);
-    text-align: center;
     padding: var(--standard-spacing);
+}
+
+@media screen and (min-width: 768px) {
+    ul#populate-list li {
+        width: calc(100% / 6);  /* <li> size on small devices */
+    }    
+}
+
+@media screen and (min-width: 922px) {
+    ul#populate-list li {
+        width: calc(100% / 8);  /* <li> size on large devices */
+    }    
 }
