@@ -1,0 +1,11 @@
+:root {
+    --color-primary: rgb(68, 255, 68);
+    --color-bg: black;    
+}
+
+ul#populate-list li {
+    float: left;
+    width: calc(100% / 8);
+    text-align: center;
+    padding: var(--standard-spacing);
+}
